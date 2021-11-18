@@ -1,0 +1,219 @@
+<section id="comptabilite">
+  <header class="header">
+    <div class="title">
+      <h5 style="font-weight: 900;"> r&eacute;sum&eacute;</h5>
+    </div>
+    <div class="body-header">
+      <!--      depenses-->
+      <div class="card-comptabilite">
+        <div class="select-comptabilite">
+          <select class="total-select-dashboard" style="width:70%;text-transform: capitalize;">
+            <option selected>mensuel</option>
+          </select>
+        </div>
+        <div class="body-card-comptabilite">
+          <img class="img-depenses" style="background-color:#2295c7;border-color: #2295c7;"
+               src="assets/images/comptabilite/icone_depenses.svg" alt="depenses">
+          <div class="montant-type">
+            <div class="montant"><h4 style="color: #38679b;">13 000 000</h4></div>
+            <small style="text-transform: capitalize;color: #2295c7;"> d&eacute;penses</small>
+          </div>
+          <small
+            style="color:#a6a6a6;text-transform: uppercase;font-size: 10px; margin-left: auto;margin-right: auto;align-self: flex-start;">fcfa</small>
+        </div>
+      </div>
+      <!--      salaires-->
+      <div class="card-comptabilite">
+        <div class="select-comptabilite">
+          <select class="total-select-dashboard" style="width:70%;text-transform: capitalize;">
+            <option selected>Mensuel</option>
+          </select>
+        </div>
+        <div class="body-card-comptabilite">
+          <img class="img-depenses" style="background-color:#80389b;border-color:#80389b"
+               src="assets/images/comptabilite/icone_salaires.svg" alt="depenses">
+          <div class="montant-type">
+            <div class="montant"><h4 style="color: #38679b;">13 000 000</h4></div>
+            <small style="text-transform: capitalize;color: #80389b;"> salaires</small>
+          </div>
+          <small
+            style="color:#a6a6a6;text-transform: uppercase;font-size: 10px; margin-left: auto;margin-right: auto;align-self: flex-start;">fcfa</small>
+        </div>
+      </div>
+      <!--      frais-->
+      <div class="card-comptabilite">
+        <div class="select-comptabilite">
+          <select class="total-select-dashboard" style="width:70%;text-transform: capitalize;">
+            <option selected>annuel</option>
+          </select>
+        </div>
+        <div class="body-card-comptabilite">
+          <img class="img-depenses" style="background-color: #E43C0A;border-color:#E43C0A "
+               src="assets/images/comptabilite/icone_frais.svg" alt="depenses">
+          <div class="montant-type">
+            <div class="montant"><h4 style="color: #38679b;">13 000 000</h4></div>
+            <small style="text-transform: capitalize;color: #E43C0A;">frais</small>
+          </div>
+          <small
+            style="color:#a6a6a6;text-transform: uppercase;font-size: 10px; margin-left: auto;margin-right: auto;align-self: flex-start;">fcfa</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--    Statistiques-->
+  <nav class="nav-comptabilite">
+    <div class="title">
+      <h5 style="font-weight: 900;text-transform: capitalize;"> statistiques</h5>
+    </div>
+    <div class="content-nav-comptabilite">
+      <div class="revenus-nav-comptabilite">
+        <div style="text-align: left;">
+          <h5 style="font-weight: 400;color:#2295c7;text-transform: uppercase;"> revenus</h5>
+          <p style="color: #38679b;margin: 0;">Calcul&eacute; sur les {{revenuMonth}} derniers mois</p>
+          <figure class="highcharts-figure" style="min-width: 310px; max-width: 800px;margin: 0 auto;">
+            <div id="container2" [chart]="char2"></div>
+          </figure>
+        </div>
+        <div class="card-comptabilite" style="margin-top: 0;">
+          <div class="body-card-comptabilite" style="padding: 0; ">
+            <img class="img-depenses" style="background-color:#fff;border-color: #fff;"
+                 src="assets/images/comptabilite/icone_revenus_plus_eleves.svg" alt="depenses">
+            <div class="montant-type">
+              <div class="montant"><h6 style="color: #8DBF53;">le plus elev&eacute;</h6></div>
+              <small style="text-transform: capitalize;color: #7b7587;"> Janvier</small>
+            </div>
+            <small
+              style="color:#38679b;text-transform: uppercase;font-size: 20px; font-weight:600;margin-left: auto;margin-right: auto;text-transform:uppercase;">10
+              000 000 fcfa</small>
+          </div>
+        </div>
+        <div class="card-comptabilite" style="margin-top: 0;">
+          <div class="body-card-comptabilite" style="padding: 0; ">
+            <img class="img-depenses" style="background-color:#fff;border-color: #fff;"
+                 src="assets/images/comptabilite/icone_revenus_moins_eleves.svg" alt="depenses">
+            <div class="montant-type">
+              <div class="montant"><h6 style="color: #E43C0A;">le moins elev&eacute;</h6></div>
+              <small style="text-transform: capitalize;color: #7b7587;"> Janvier</small>
+            </div>
+            <small
+              style="color:#38679b;text-transform: uppercase;font-size: 20px; font-weight:600;margin-left: auto;margin-right: auto;text-transform:uppercase;">10
+              000 000 fcfa</small>
+          </div>
+        </div>
+
+      </div>
+      <div class="salaire-frais">
+        <div class="salaire-nav-comptabilite">
+          <div style="text-align: left;">
+            <h5 style="font-weight: 400;color:#2295c7;text-transform: uppercase;"> salaires</h5>
+            <figure class="highcharts-figure" style="min-width: 310px; max-width: 800px;margin: 0 auto;">
+              <div id="container3" [chart]="char3"></div>
+            </figure>
+          </div>
+        </div>
+        <div class="frais-nav-comptabilite">
+          <div style="text-align: left;">
+            <h5 style="font-weight: 400;color:#2295c7;text-transform: uppercase;"> frais</h5>
+            <figure class="highcharts-figure" style="min-width: 310px; max-width: 800px;margin: 0 auto;">
+              <div id="container4" [chart]="char4"></div>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="chiffresAffaire-nav-comptabilite">
+        <!--        -->
+        <div style="text-align: left;">
+          <h5 style="font-weight: 400;color:#2295c7;text-transform: uppercase;"> revenus</h5>
+          <p style="color: #38679b;margin: 0;">Calcul&eacute; sur les {{revenuMonth}} derniers mois</p>
+          <figure class="highcharts-figure" style="min-width: 310px; max-width: 800px;margin: 0 auto;">
+            <div id="container5" [chart]="charFive" ></div>
+          </figure>
+        </div>
+        <div class="card-comptabilite" style="margin-top: 0;">
+          <div class="body-card-comptabilite" style="padding: 0; ">
+            <img class="img-depenses" style="background-color:#fff;border-color: #fff;"
+                 src="assets/images/comptabilite/icone_revenus_plus_eleves.svg" alt="depenses">
+            <div class="montant-type">
+              <div class="montant"><h6 style="color: #8DBF53;">le plus elev&eacute;</h6></div>
+              <small style="text-transform: capitalize;color: #7b7587;"> Janvier</small>
+            </div>
+            <small
+              style="color:#38679b;text-transform: uppercase;font-size: 20px; font-weight:600;margin-left: auto;margin-right: auto;text-transform:uppercase;">10
+              000 000 fcfa</small>
+          </div>
+        </div>
+        <div class="card-comptabilite" style="margin-top: 0;">
+          <div class="body-card-comptabilite" style="padding: 0; ">
+            <img class="img-depenses" style="background-color:#fff;border-color: #fff;"
+                 src="assets/images/comptabilite/icone_revenus_moins_eleves.svg" alt="depenses">
+            <div class="montant-type">
+              <div class="montant"><h6 style="color: #E43C0A;">le moins elev&eacute;</h6></div>
+              <small style="text-transform: capitalize;color: #7b7587;"> Janvier</small>
+            </div>
+            <small
+              style="color:#38679b;text-transform: uppercase;font-size: 20px; font-weight:600;margin-left: auto;margin-right: auto;text-transform:uppercase;">10
+              000 000 fcfa</small>
+          </div>
+        </div>
+        <!--        -->
+      </div>
+
+    </div>
+
+  </nav>
+  <!--    Chiffres d'affaires-->
+  <main class="main">
+    <div class="title">
+      <h5 style="font-weight: 900;"> chiffre d'affaires</h5>
+      <img class="parametres-button" src="assets/images/comptabilite/icone_parametres_chiffre_affaires.svg" alt="param">
+    </div>
+    <div class="card-comptabilite">
+      <div class="select-comptabilite">
+        <select class="total-select-dashboard" style="width:70%;text-transform: capitalize;">
+          <option selected>2020</option>
+        </select>
+      </div>
+      <div class="body-card-comptabilite">
+        <img class="img-depenses" style="background-color:#ffce1f;border-color:#ffce1f;"
+             src="assets/images/comptabilite/icone_chiffre_affaires.svg" alt="depenses">
+        <div class="montant-type">
+          <div class="montant"><h4 style="color: #38679b;">13 000 000</h4></div>
+          <small style="text-transform: capitalize;color: #ffce1f;"> chiffre d'affaires</small>
+        </div>
+        <small
+          style="color:#a6a6a6;text-transform: uppercase;font-size: 10px; margin-left: auto;margin-right: auto;align-self: flex-start;">fcfa</small>
+      </div>
+      <!--        widget-->
+      <div class="widget-comptabilite" style="display: flex;align-items: center;">
+        <figure class="highcharts-figure">
+          <div id="container" [chart]="chart">
+          </div>
+        </figure>
+        <p style="color: #38679b; margin-top: 10px">{{croissancePourcentage}} % de croissance en 2020</p>
+      </div>
+      <!--      Clients-->
+      <div class="clients-affaire">
+        <div class="title-clients"
+             style="text-align: left;padding: 10px 0;text-transform: uppercase;color: #38679b;font-weight: 900;">
+          <h5 style="font-weight: 900;">clients</h5>
+        </div>
+        <div class="select-comptabilite">
+          <select class="total-select-dashboard" style="width:70%;">
+            <option selected>2019</option>
+          </select>
+        </div>
+        <div class="montant" style="text-transform: uppercase;color: #38679b;font-size: 15px;font-weight: bold">
+          <div *ngFor="let clients of clientsNameChiffer;" style="margin: 10px 0">
+            <span style="display: block;">{{clients.name}} </span>
+            <div class="montant-affaire" style="display: flex;flex-direction: row;margin-top: 5px;">
+              <span>{{clients.montant}} </span>
+              <small style="margin-left: auto;margin-right: 10px;color: #a6a6a6;">fcfa </small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</section>

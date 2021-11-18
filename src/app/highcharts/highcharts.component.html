@@ -1,0 +1,444 @@
+<!--
+<div class="container">
+  &lt;!&ndash;  effectif/Classement&ndash;&gt;
+  <div class="row" style="padding-top: 20px;">
+    <div class="col" style="margin-right:10px;margin-bottom: 10px;">
+
+      &lt;!&ndash;  mise en colonne de 0:0&ndash;&gt;
+      <div class="d-flex flex-column" style="margin-bottom: 20px; ">
+        &lt;!&ndash;ligne effectif&ndash;&gt;
+        <div class="container-fluid text-start">
+          <span style="color: #2295c7;font-weight: bold;">Effectif</span>
+        </div>
+        &lt;!&ndash;  line total/commenerciaux&ndash;&gt;
+        <div class="row" style="background: #ffffff;border-radius: 5px 5px 5px 5px;border-color: #FFFFFF; border-style: solid;">
+          &lt;!&ndash;    totale&ndash;&gt;
+          <div class="text-start" style="margin-bottom: 15px; width: 120px;">
+            <select class="form-select" style="color: #fd7e14;border-color: #fd7e14" aria-label="Default select example">
+              <option selected>Total</option>
+              <option style="color:#2295c7;height: fit-content; " *ngFor="let selectedItem of selectedItems " [value]="selectedItem">{{selectedItem}}</option>
+            </select>
+          </div>
+          &lt;!&ndash;    ligne commerciaux&ndash;&gt;
+          <div class="container-fluid">
+
+            <div class="d-flex justify-content-between align-items-center" style="padding-left: 0px; ">
+              &lt;!&ndash;colone photo&ndash;&gt;
+              <img src="assets/images/salesman/icone_client_prospect_commerciaux.PNG" style="height: 100%;">
+              <div class="text-start">
+                <h4 style="font-weight: bold;color: #38679b;font-size:70%;font-weight: bold;text-transform: uppercase;">commerciaux</h4>
+                <small style="font-size: 15px;color:#a6a6a6;">2 nouveaux commerciaux</small>
+              </div>
+              <div class="align-self-end">
+                <span style="font-size: 30px;color: #38679b;">101</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      &lt;!&ndash;&ndash;&gt;
+      &lt;!&ndash;&ndash;&gt;
+      &lt;!&ndash;  mise en colonne de 1:0&ndash;&gt;
+      <div class="d-flex flex-column">
+        <div class="container-fluid text-start">
+          <span style="color: #2295c7; font-weight: bold;">Classement</span>
+        </div>
+        <div class="row">
+          <div class="card">
+            <div class="card-header"><span style="font-weight: bold;color:#2295c7;text-transform: uppercase;">Saleman du mois</span></div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 style="color: #38679b;font-weight: bold;">Ndeye Rokhaya Thiam</h5>
+                  <h6 style="color: #d4af37;">12 Clients</h6>
+                  <h6 style="color: #d4af37;">15 Prospects</h6>
+                </div>
+                <img src="assets/images/salesman/icons8-trophy-96.png" alt="trophy_logo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center" style="background: #2295c7;opacity: 50%;">
+          <a href="#" style="color: #38679b;font-weight:bold;text-decoration: none;">voir d&eacute;tails</a>
+        </div>
+        <div class="row" style="background: #FFFFFF;">
+          <span style="visibility: hidden;"> a la ligne</span>
+        </div>
+        <div class="row" style="background: #FFFFFF;">
+
+          <div class="d-flex justify-content-between" >
+
+            <div style="border-right: 5px solid #a6a6a6; padding-right: 10%;">
+              <br>
+              <h5 style="color: #38679b;font-weight: bold;"><span>2.</span> Babacar Ciss&eacute;</h5>
+              <h5 style="color: #a6a6a6;"><span>8.</span> Clients</h5>
+              <h5 style="color: #a6a6a6;"><span>12.</span> Prospects;</h5>
+            </div>
+            <div >
+              <br>
+              <h5 style="color: #38679b;font-weight: bold;"><span>3.</span> Jean Paul Gomis</h5>
+              <h5 style="color: #b08d57;"><span>6.</span> Clients</h5>
+              <h5 style="color: #b08d57;"><span>9.</span> Prospects;</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col">
+      <div class="d-flex flex-column">
+        &lt;!&ndash;        ligne resume&ndash;&gt;
+        <div class="d-flex justify-content-between">
+          <div>
+            <h5 style="color: #38679b;font-weight: bold;">R&eacute;sum&eacute;</h5>
+          </div>
+          <div>
+            <img src="assets/images/salesman/icone_settings.svg" alt="icone setting" style="background-color: #38679b;">
+          </div>
+        </div>
+        &lt;!&ndash;        ligne commercial&ndash;&gt;
+        <div class="d-flex justify-content-between" style="padding-top:10px;background-color: #FFFFFF;margin-top: 5px;">
+          <div>
+            <span style="font-size: 15px;color: #2295c7;text-transform: uppercase;">commercial</span>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between">
+              <div class="btn-group" style="">
+                <div><a href="#" class="btn btn-primary" style="margin-left: 1px;background-color:#FFFFFF;color: #2295c7"> Prev</a></div>
+                <div><a href="#" class="btn btn-primary" style="margin-left: 4px;background-color:#FFFFFF;color: #2295c7"> Next</a></div>
+              </div>
+              <div class="text-start" style="margin-left: 3px;margin-bottom: 15px; width: 120px;">
+                <select class="form-select " style="color: #e46e0a;border-color: #e46e0a" aria-label="Default select example">
+                  <option selected>Total</option>
+                  <option style="color:#2295c7;height: fit-content; " *ngFor="let selectedItem of selectedItems " [value]="selectedItem">{{selectedItem}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        &lt;!&ndash;        ligne pape moussa dieng&ndash;&gt;
+        <div class="d-flex justify-content-between">
+          <div class="col p-0" style="background-color: #FFFFFF;">
+            <div class="d-flex">
+              &lt;!&ndash;colone photo&ndash;&gt;
+              <img src="assets/images/salesman/photo.JPG" style="height: 55px;">
+              <div style="margin-left: 5px;">
+                <h4 style="color:#38679b;margin-bottom:0px;font-weight: bold;color: #0a53be;font-size:70%;font-weight: bold;">Pape Moussa Dieng</h4>
+                <small style="color:#2295c7;font-size: 15px;">Salesman</small><br>
+                <small style="color:#a6a6a6;font-size: 13px;">Lorem Ipsum</small>
+              </div>
+            </div>
+          </div>
+          <div class="col align-items-center p-0" style="background-color: #FFFFFF;border-left: 3px solid #2295c7;">
+            &lt;!&ndash;colone photo&ndash;&gt;
+            <div class="d-flex">
+              <img class="align-self-center" src="assets/images/salesman/icone_client_prospect_commerciaux.JPG" style="height: 40px;">
+              <div style="margin-left: 5px;">
+                <h5 style="color:#38679b;font-size:20px;margin-bottom: 0px;">Clients</h5>
+                <small style="color: #a6a6a6;">2 nouveux clients</small>
+              </div>
+              <div class="align-self-end" style="margin-left: 5px;">
+                <span style="color: #38679b;font-weight: bold;">23</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col p-0" style=" background-color: #FFFFFF;">
+            &lt;!&ndash;colone photo&ndash;&gt;
+            <div class="d-flex" >
+              <img class="align-self-center" src="assets/images/salesman/icone_client_prospect_commerciaux.JPG" style="height: 40px;">
+              <div style="margin-left: 3px;">
+                <h5 style="color:#2295c7;font-weight:bold;font-size:20px;margin-bottom: 0px;">Prospects</h5>
+                <small style="color:#a6a6a6;">2 nouveux clients</small>
+              </div>
+              <div class="align-self-end" style="margin-left: 5px;">
+                <span style="color:#2295c7;font-weight: bold;">23</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        &lt;!&ndash;        Ligne secteur activite&ndash;&gt;
+        <div class="d-flex justify-content-between"  >
+          <div class="col" style=" background-color: #FFFFFF;">
+            <div class="row"><h5 style="color: #38679b;">Clients</h5></div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row">
+                <ul style="list-style-type: disc;">
+                  <li style="color: #6f42c1;"> Secteur 1 <span class="text-end">10</span></li>
+                </ul>
+                <ul style="margin-left:20px;list-style-type: disc;">
+                  <li style="color:#d4af37;">  Secteur 4 <span class="text-end">10</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col" style=" background-color: #FFFFFF;">
+            <div class="row"><h5 style="color: #2295c7;">Prospects</h5></div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row">
+                <ul style="list-style-type: disc;">
+                  <li style="color: #6f42c1;"> Secteur 1 <span class="text-end">10</span></li>
+                </ul>
+                <ul style="margin-left:20px;list-style-type: disc;">
+                  <li style="color:#d4af37;"> Secteur 4 <span class="text-end">10</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        &lt;!&ndash;        ligne graphique&ndash;&gt;
+        <div class="row">
+          <div class="d-flex flex-row" style="padding-top: 10px;">
+            <div class="col text-start" ><h5 style="color: #2295c7;font-weight: bold;">R&eacute;partition</h5></div>
+            <div class="btn-group">
+              <button class="btn btn-secondary" style="font-size:10px;margin-right:5px;padding-left:5px ;padding-right:5px ;background-color: #a6a6a6;">7 derniers jours</button>
+              <button class="btn btn-secondary" style="margin-right:5px;padding-left:5px ;padding-right:5px ;background-color: #a6a6a6;">30 derniers jours</button>
+              <button class="btn btn-secondary" style="margin-right:5px;padding-left:5px ;padding-right:5px ;background-color: #e4630a;">12 derniers mois</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="d-flex justify-content-between" >
+          <div class="d-flex flex-row" style="padding-top: 15px;">
+            <ul style="border-radius: 5px 5px 5px 5px; padding-right:10px;margin-right:2px;border-style: solid;color: #38679b;list-style-type: disc;">
+              <li>
+              <form>
+                <label for="prospect" style=" padding-right:10px;">Prospect</label>
+                <input type="checkbox" id="prospect" name="prospect">
+              </form>
+              </li>
+            </ul>
+            <ul style="border-radius: 5px 5px 5px 5px;margin-left:2px;padding-right:10px;border-style: solid;color: #2295c7;list-style-type: disc;">
+              <li>
+                <form>
+                  <label for="client" style=" padding-right:10px;">Client</label>
+                  <input type="checkbox" id="client" name="prospect">
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="text-start" style="padding-top: 15px;margin-left: 3px;margin-bottom: 15px; width: 120px;">
+            <select class="form-select " style="color: #e46e0a;border-color: #e46e0a" aria-label="Default select example">
+              <option selected>Total</option>
+              <option style="color:#2295c7;height: fit-content; " *ngFor="let selectedItem of selectedItems " [value]="selectedItem">{{selectedItem}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="padding-top: 5px; height: 270px;" [chart]="chart"></div>
+      </div>
+
+      &lt;!&ndash;fin deuxieme colonne&ndash;&gt;
+    </div>
+  </div>
+</div>
+-->
+
+
+<!-- salesman content -->
+<div class="salesman">
+  <!-- salesman left -->
+  <div class="left">
+    <!-- effectif block  -->
+    <div class="effectif">
+      <!-- effectif title -->
+      <div class="effectiftile">
+        <h3 class="effectifh">Effectif</h3>
+      </div>
+      <!-- content total/commerciaux -->
+      <div class="contenttotalcom">
+        <!-- total line -->
+        <div class="total">
+          <select class="totalselect">
+            <option selected>Total</option>
+
+          </select>
+        </div>
+        <!-- commerciaux line -->
+        <div class="commerciaux">
+          <!-- image com -->
+          <img class="imgcomprosp" src="assets/images/salesman/icone_client_prospect_commerciaux.svg">
+          <!--  -->
+          <div class="commerciauximg">
+
+            <h4 class="uppercase commerciauxleft">commerciaux</h4>
+            <small class="colorsmall-left"> 2 nouveaux commerciaux</small>
+           </div>
+          <small class="uppercase colorsmall-left" style="font-size: 30px;">101</small>
+        </div>
+      </div>
+    </div>
+    <!-- classement block -->
+    <div class="classement">
+      <!-- classment title -->
+      <div class="classementtitle">
+        <h3>Classement</h3>
+      </div>
+      <!-- content Classement -->
+      <div class="contentclassement">
+        <!--  salesman du mois title -->
+        <div class="salesmanofmonth">
+          <h5 class="uppercase">salesman du mois</h5>
+        </div>
+        <!-- salesman and properties -->
+        <div class="salesmanproperties">
+          <!-- clients prospects properties -->
+          <div class="salesmanpropertiescontent">
+            <h4 class="colorbestsalesman">ndeye Rokhaya Thiam</h4>
+            <h4  class="colorclientbestsalesman ">12 clients</h4>
+            <h4 class=" colorclientbestsalesman">15 prospects</h4>
+          </div>
+
+          <!-- trophy -->
+          <img src="assets/images/salesman/icons8-trophy-96.png">
+        </div>
+
+        <!-- show more -->
+        <div class="showmore">
+          <a class="details" href="#">
+            voir d&eacute;tails
+          </a>
+        </div>
+        <!-- second and third -->
+        <div class="secondthird">
+          <!--second -->
+          <div class="second">
+            <h4 class="colorbestsalesman">2. Babacar Cisse</h4>
+            <h4  class="colorclientsecondsalesman ">8 clients</h4>
+            <h4 class="colorclientsecondsalesman">15 prospects</h4>
+          </div>
+          <!-- third -->
+          <div class="third">
+            <h4 class="colorbestsalesman">2. Babacar Cisse</h4>
+            <h4  class="colorclientthirdalesman ">8 clients</h4>
+            <h4 class="colorclientthirdalesman">15 prospects</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- salesman right -->
+  <div class="right">
+    <!-- resume line -->
+    <div class="resumeline">
+      <div class="resume">
+        <h3 class="resumetitle">R&eacute;sum&eacute;</h3>
+        <button type="button" class="buttonstting">
+          <img class="setting" src="assets/images/salesman/icone_settings.svg">
+        </button>
+      </div>
+      <!-- commerciaux clients prospects block -->
+
+      <div class="comclientssecteur">
+        <!-- line commerciaux Total -->
+        <div class="comtotal">
+          <!-- block com right -->
+          <div class="comright">
+            <h5 class="commerciauxright">commerciaux</h5>
+          </div>
+          <div class="prevafttotal">
+            <div class="fc-button-group">
+              <button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span
+                class="fc-icon fc-icon-left-single-arrow"></span></button>
+              <button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span
+                class="fc-icon fc-icon-right-single-arrow"></span></button>
+            </div>
+            <select class="totalselectright">
+            <option selected>Total</option>
+            </select>
+          </div>
+        </div>
+        <!-- clients/prospects line -->
+        <div class="clientsprospectsimg">
+          <!-- column before bar -->
+          <div class="imgname">
+            <img class="name" src="assets/images/salesman/photo.JPG">
+            <div class="nameafterimg">
+              <h5 class="marginpaddingnameafterimg">Pape Moussa DIENG</h5>
+              <h6 class="marginpaddingnameafterimg2">Selsman</h6>
+              <small class="marginpaddingnameafterimg3">Lorem ipsum</small>
+            </div>
+          </div>
+          <!-- column after bar -->
+          <div class="clientspros">
+            <!-- commerciaux line -->
+            <div class="commerciauxright">
+              <!-- image com -->
+              <img class="imgcomprosp1" src="assets/images/salesman/icone_client_prospect_commerciaux.svg">
+              <!--  -->
+              <div class="commerciauximg1">
+                <h4 class="uppercase commerciauxleft1">Clients</h4>
+                <small class="colorsmall-left"> 2 nouveaux clients</small>
+
+              </div>
+              <small class="uppercase colorsmall-left1" style="font-size: 30px;">23</small>
+            </div>
+            <div class="commerciauxright2">
+              <!-- image com -->
+              <img class="imgcomprosp2" src="assets/images/salesman/icone_client_prospect_commerciaux.svg">
+              <!--  -->
+              <div class="commerciauximg2">
+
+                <h4 class="uppercase commerciauxleft2">Prospects</h4>
+                <small class="colorsmall-left"> 2 nouveaux prospects</small>
+
+              </div>
+              <small class="uppercase colorsmall-left2" style="font-size: 30px;">23</small>
+            </div>
+          </div>
+        </div>
+        <!-- secteur Activite line -->
+        <div class="sa">
+          <!-- clients sa -->
+          <div class="clientssa">
+            <h4 class="commerciauxleft1">Clients</h4>
+            <div class="clientsaleft">
+              <div class="sectleft">
+                <ul style="margin: 0.2em 0;padding: 0 0 0 1em;list-style-type: disc">
+                  <li></li>
+                </ul>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">Secteur 1</h5>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">23</h5>
+              </div>
+              <div class="sectright">
+                <ul style="margin: 0.2em 0;padding: 0 0 0 1em;list-style-type: disc">
+                  <li></li>
+                </ul>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">Secteur 1</h5>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">23</h5>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- prospects sa -->
+          <div class="prospectsa">
+            <h4 class="commerciauxleft2">Prospects</h4>
+            <div class="clientsaleft">
+              <div class="sectleft">
+                <ul style="margin: 0.2em 0;padding: 0 0 0 1em;list-style-type: disc;">
+                  <li></li>
+                </ul>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">Secteur 1</h5>
+                <h5 class="colorsmall-left2" style="font-size: 1.3em;">23</h5>
+              </div>
+              <div class="sectright">
+                <ul style="margin: 0.2em 0;padding: 0 0 0 1em;list-style-type: disc;">
+                  <li></li>
+                </ul>
+                <h5 class="colorsmall-left2" style="display: inline;font-size: 1.3em;">Secteur 1</h5>
+                <h5 class="comtotal2  colorsmall-left2" style="display: inline;font-size: 1.3em;">23</h5>
+              </div>
+            </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

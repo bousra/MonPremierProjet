@@ -1,0 +1,400 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background: lightgrey !important;
+
+}
+.salesman-dashboard{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  /*grid-column-gap: 20px;*/
+  width: 100%;
+  margin: 0 15px;
+}
+.left-dashboard{
+  grid-column-start: 1;
+  grid-column-end:span 2;
+  width: 100%;
+  margin: 0 0 15px;
+}
+.flex-dashboard{
+  display: flex;
+}
+.flex-column-dashboard{
+  flex-direction: column;
+}
+.flex-row-dashboard{
+  flex-direction: row;
+}
+.card-dashboard{
+  width: 100%;
+}
+.title-card-dashboard{
+  display: block;
+  text-align: left;
+  color: #2295c7;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.body-card-dashboard{
+  background-color: #fff;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #fff;
+  margin: 0 20px 0 5px;
+}
+.total-dashboard{
+  text-align: start;
+}
+.total-select-dashboard{
+  color: #e46e0a;
+  border-color: #e46e0a;
+  width: 50%;
+  border-radius: 3px;
+  height: 100%;
+  background: #fff;
+}
+.com-section-new-all{align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+.img-com-prosp{
+  background: #38679b;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #38679b;
+  height: 50px;
+  width: auto;
+}
+.commerciaux-img-dashbord{
+  padding-left: 5px;
+  text-align: start;
+  font-weight: bold;
+}
+.commerciaux-word{
+  color: #2295c7;
+  text-transform: uppercase;
+  margin: 0;
+}
+.small-new-commerciaux-word{
+  color: #a6a6a6;
+}
+.samll-com-all {
+  color: #38679b;
+  font-weight: bold;
+  justify-self: flex-end;
+  align-self: end;
+  margin-left: auto;
+}
+.salesman-of-month{
+  color: #2295c7;
+  text-transform: uppercase;
+  text-align: left;
+}
+.salesman-of-month-properties{
+  width: 100%;
+}
+
+.salesman-of-month-properties-content{
+  text-align: left;
+}
+.name-salesman-of-month{
+  color: #38679b;
+  text-transform: uppercase;
+}
+.clients-salesman-of-month, .prospects-salesman-of-month{
+  color: #d4af37;
+}
+.trophy-salesman-of-month{
+  margin-left: auto;
+}
+.show-more{
+  padding: 0.5em 0;
+}
+.details{
+  display: block;
+  background: #2295c7;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #2295c7;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.second-third{
+
+}
+.second{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.third{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  border-left: 2px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #a6a6a6;
+}
+.name-second-salesman-of-month,.name-third-salesman-of-month{
+  color: #38679b;
+
+}
+.clients-prospect-second{
+color: #a6a6a6;
+}
+.clients-prospects-third{
+  color: #b08d57;
+}
+.margin-h{
+  margin: 10px 0 10px 10px;
+}
+
+/*La partie ci dessus est OK OK OK OK*/
+
+
+/*right*/
+.right-dashboard{
+  grid-column-start: 3;
+  grid-column-end: span 5;
+  width: 100%;
+  margin: 0 0 15px;
+}
+.title-resume{
+  text-align: left;
+  color: #2295c7;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.setting{
+
+}
+
+.button-setting{
+  background: #2295c7;
+  border-radius: 5px;
+  border-color: #2295c7;
+  border-style: none;
+  margin: 5px 35px 5px auto;
+
+}
+.setting-img{
+  width: 25px;
+  height: auto;
+
+}
+.margin-c-pnt{
+  margin: 5px 0 0 10px;
+}
+.com-prev-next-total{
+  justify-content: space-between;
+}
+.prev-next-total{
+margin: 0 10px 0 0;
+
+}
+.padding-prev-next{
+  padding: 0 0.6em;
+  color: #2295c7;
+  margin: 0 0.4em;
+  border-radius: 5px;
+  border-color: #2295c7;
+  border-style: solid;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.com-info{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5px;
+  margin: 10px 0 0 0;
+}
+.name-info{
+
+}
+.name-after-img{
+  padding: 0 0.6em;
+  margin: 0 0 10px;
+  text-align: start;
+}
+.name-info-clients{
+  border-left: 2px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #2295c7;
+  align-items: center;
+  padding: 0 0.6em;
+}
+.name-info-prospects{
+
+  align-items: center;
+  padding: 0 0.6em;
+}
+.img-name{
+  margin: 0 0 10px;
+}
+
+.activity-sector{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 5px;
+  margin: 0;
+}
+.activity-sector-clients{
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.clients-activity-sector{
+
+}
+.prospects-activity-sector{
+
+}
+.activity-sector-prospects{
+  grid-column-start: 3;
+  grid-column-end: span 4;
+  border-left: 2px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #2295c7;
+}
+.dates{
+  margin:10px 15px 10px auto;
+}
+.seven-thirty{
+  background-color: #a6a6a6;
+  padding: 0 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border-color: #a6a6a6;
+  border-style: solid;
+  color: #fff;
+
+}
+.twelth{
+  background-color: #fff;
+  color: #e46e0a;
+  border-radius: 5px;
+  border-color: #e46e0a;
+  border-style: solid;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+.ul-pro-clients{
+  border-radius: 5px;
+  border-color: #2295c7;
+  border-style: solid;
+  padding: 0 0.4em 0 0;
+  margin: 0 5px;
+
+}
+.pro-clients{
+  margin-right: auto;
+}
+.ul-pro{
+  color: #38679b;
+  font-weight: bold;
+}
+.ul-clients{
+    color: #2295c7;
+}
+.name-rep{
+  margin-left: auto;
+  margin-right: 15px;
+  width: 150px;
+  color: #e46e0a;
+  padding: 0 5px;
+  border-radius: 5px;
+  border-color: #e46e0a;
+  border-style: solid;
+}
+.courbe{
+  height: 250px;
+}
+/*Media queries*/
+@media only screen and (max-width: 570px) {
+  .salesman-dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: lightgrey;
+    width: 100%;
+  }
+  .left-dashboard{
+    grid-column-start: 1;
+    grid-column-end:span 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 100%;
+  }
+  .right-dashboard{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+  }
+  .com-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    margin: 10px 0;
+    grid-template-rows: 1fr 1fr;
+  }
+  .name-info{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: #a6a6a6;
+    margin: 0 0 2px 0;
+  }
+
+  .name-info-clients{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid;
+    border-color: #2295c7;
+    align-items: center;
+    padding: 0 0.6em;
+  }
+  .activity-sector{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 5px;
+    margin: 10px 0;
+  }
+  .activity-sector-clients{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+  }
+  .activity-sector-prospects{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+
+  }
+}

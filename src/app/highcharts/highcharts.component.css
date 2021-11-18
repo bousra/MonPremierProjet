@@ -1,0 +1,396 @@
+*{
+  box-sizing: border-box;
+
+}
+body{
+
+}
+.salesman{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 1em;
+  background: lightgrey;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+}
+.effectif{
+  display: flex;
+  flex-direction: column;
+}
+.effectiftile{
+  display: block;
+  color: #2295c7;
+  text-align: left;
+  font-weight: bold;
+}
+.effectifh{
+
+}
+.contenttotalcom{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #fff;
+  background: #fff;
+  padding: 10px;
+}
+.total{
+
+}
+.totalselect{
+  color: #e46e0a;
+  border-color: #e46e0a;
+  width: 50%;
+  border-radius: 3px;
+  height: 100%;
+  background: #fff;
+}
+.commerciaux{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.imgcomprosp{
+  background: #38679b;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #fff;
+  height: 50px;
+  width: auto;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.commerciauximg{
+  display: flex;
+  flex-direction: column;
+  padding: 0.6em 0.4em;
+}
+.commerciauxleft{
+  color: #2295c7;
+  font-weight: bold;
+  margin: 0.1em 0 0.1em;
+
+}
+.colorsmall-left{
+  color: #a6a6a6;
+  font-size: 15px;
+  align-self: end;
+}
+/*Jusqu'ici ca marche*/
+
+/*debut de Classement*/
+.classement{
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+.classementtitle{
+  display: block;
+  color: #2295c7;
+  text-align: left;
+  font-weight: bold;
+}
+.contentclassement{
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #fff;
+  background: #fff;
+  padding: 10px;
+}
+.salesmanofmonth{
+  color: #2296c7;
+  text-align: start;
+}
+.salesmanproperties{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.salesmanpropertiescontent{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+.colorbestsalesman{
+  color: #38679b;
+  margin: 0.1em 0;
+}
+.colorclientbestsalesman{
+  color: #d4af37;
+  margin: 0.1em 0;
+}
+.showmore{
+  padding: 0.5em 0;
+}
+.details{
+  display: block;
+  background: #2295c7;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #2295c7;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.secondthird{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+.second{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.4em 0 0;
+}
+.colorclientsecondsalesman{
+  color: #a6a6a6;
+}
+.colorclientthirdalesman{
+  color: #b08d57;
+}
+.third{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.2em;
+  border-left: 2px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #a6a6a6;
+}
+/*ce qui se trouve est ok c'est la gauche*/
+
+/*Right */
+
+.right{
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeline{
+  display: flex;
+  flex-direction: column;
+}
+.resume{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.resumetitle{
+  text-align: start;
+  color: #2295c7;
+}
+.buttonstting{
+  background: #2295c7;
+  border-radius: 5px;
+  border-color: #2295c7;
+  border-style: none;
+ margin: 0 15px;
+}
+
+.setting{
+
+}
+.comclientssecteur{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #fff;
+  margin: 0.4em 0 0;
+
+
+}
+.comtotal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comright{
+  color: #2295c7;
+  text-transform: uppercase;
+  text-align: left;
+}
+.commerciauxright{
+
+}
+.prevafttotal{
+  padding: 0.2em 1em;
+}
+.paddingprevafttotal{
+  padding: 0 0.6em;
+  color: #2295c7;
+  margin: 0 0.4em;
+  border-radius: 5px;
+  border-color: #2295c7;
+  border-style: solid;
+  font-weight: bold;
+
+}
+.totalselectright{
+  color: #e46e0a;
+  border-color: #e46e0a;
+  border-radius: 3px;
+  background: #fff;
+}
+.clientsprospectsimg{
+  display: flex;
+  flex-direction: row;
+}
+.imgname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.6em 0 0;
+  border-left: 0;
+  border-right: 2px;
+  border-top: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #2295c7;
+}
+.name{
+
+}
+.nameafterimg{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.marginpaddingnameafterimg{
+  margin: 0.1em 0;
+  padding: 0 0 0 0.6em;
+  color: #38679b;
+
+}
+.marginpaddingnameafterimg2{
+  margin: 0.3em 0;
+  padding: 0 0 0 1em;
+  color: #2295c7;
+
+}
+.marginpaddingnameafterimg3{
+  margin: 0.1em 0;
+  padding: 0 0 0 1em;
+  color: #a6a6a6;
+
+}
+.clientspros{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.commerciauxright{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0 0 0.4em;
+  align-items: center;
+}
+.imgcomprosp1{
+  background: #38679b;
+  border-radius: 5px;
+  border-style: none;
+  height: 50px;
+
+}
+.commerciauximg1{
+  padding: 0 1em 0 ;
+
+}
+.commerciauxleft1{
+  color: #38679b;
+  text-align: left;
+  margin: 0.1em 0 0.1em;
+}
+.colorsmall-left1{
+  color: #38679b;
+  font-size: 15px;
+
+}
+
+/*commerciaux right 2*/
+.commerciauxright2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0 0 0.4em;
+  align-items: center;
+}
+.imgcomprosp2{
+  background: #2295c7;
+  border-radius: 5px;
+  border-style: none;
+  height: 50px;
+
+}
+.commerciauximg2{
+  padding: 0 1em 0 ;
+
+}
+.commerciauxleft2{
+  color: #2295c7;
+  margin: 0.1em 0 0.1em;
+  text-align: left;
+}
+.colorsmall-left2{
+  color: #2295c7;
+  font-size: 15px;
+
+}
+
+/*ok ok*/
+
+.sa{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.clientssa{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.clientsaleft{
+  display: flex;
+  flex-direction: row;
+
+}
+.sectleft{
+  width: 50%;
+  display: flex;
+  flex-display: row;
+  justify-content: space-around;
+}
+
+.colorsmall-left2{
+  color: #2295c7;
+  margin: 0.1em 0 0.1em;
+}
+.sectright{
+  width: 50%;
+  display: flex;
+  flex-display: row;
+  justify-content: space-around;
+}
+.prospectsa{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 0 0 0 1em;
+}
+

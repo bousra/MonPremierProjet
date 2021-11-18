@@ -1,0 +1,245 @@
+*{
+  box-sizing: border-box;
+}
+#comptabilite {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "r r r a"
+                       "s s s a";
+  grid-template-rows: 160px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #ebeef2;
+  /*grid-gap: 5px;*/
+  margin: 0;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#comptabilite > header {
+  grid-area: r;
+  /*background-color: #8ca0ff;*/
+}
+
+#comptabilite > nav {
+  grid-area: s;
+  /*background-color: #ffa08c;*/
+}
+.nav-comptabilite{
+  margin: 0 10px;
+}
+.content-nav-comptabilite{
+  display: grid;
+  grid-template-areas:
+    "rev salFrais chif "
+    "rev salFrais chif";
+  grid-gap: 5px;
+  grid-template-columns: repeat(3,1fr);
+  /*height: 200px;*/
+
+}
+.revenus-nav-comptabilite{
+  grid-area: rev;
+  background-color: #fff;
+  padding: 5px ;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+} .salFrais{
+    grid-area: salFrais;
+  }
+.salaire-nav-comptabilite{
+
+  background-color: #fff;
+  padding: 5px ;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  margin-top: 5px;
+}
+.chiffresAffaire-nav-comptabilite{
+  grid-area: chif;
+  background-color: #fff;
+  padding: 5px ;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+}
+.frais-nav-comptabilite{
+  background-color: #fff;
+  padding: 5px ;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  margin-top: 5px;
+}
+#comptabilite > main {
+  grid-area: a;
+  /*background-color: #ffff64;*/
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  color: #2295c7;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: left;
+}
+.body-header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.card-comptabilite {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 5px 7px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  margin: 5px 0;
+}
+.select-comptabilite{
+  text-align: left;
+}
+.total-select-dashboard{
+
+color: #e46e0a;
+border-color: #e46e0a;
+width: 50%;
+border-radius: 3px;
+height: 100%;
+background: #fff;
+}
+.body-card-comptabilite{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+}
+.img-depenses{
+  height: 50px;
+  align-self: center;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.montant-type{
+  margin: 0 0 0 20px;
+  display: flex;flex-direction: column;
+  text-align: left;
+}
+.montant{
+  text-align: left;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.title-affaire{
+  display: flex;
+  flex-direction: row;
+  margin: 3px 5px;
+}
+.parametres-button{
+  height: 30px;
+  background-color: #fff;
+  margin-left: auto;
+  border-radius: 5px 5px 2px 2px;
+  border-color: #fff;
+  border-style: solid;
+}
+/**/
+/**/
+/**/
+.widget-comptabilite{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 2px;
+  border-color: #38679b;
+  border-style: solid;
+  margin: 0 10px;
+}
+.pie-chart{
+
+}
+
+.text-center {
+  text-align: center;
+}
+.highcharts-figure, .highcharts-data-table table {
+  min-width: 80px;
+  max-width: 80px;
+  margin: 0;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #EBEBEB;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.highcharts-data-table caption {
+  padding: 0;
+  font-size: 1.2em;
+  color: #000;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+  padding: 0;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+  background: #000;
+}
+
+.highcharts-data-table tr:hover {
+  background: #000;
+}
+
+input[type="number"] {
+  min-width: 50px;
+}
+
+.title-clients{
+
+}
+.clients-name-chiffer{
+  display: flex;
+  flex-direction: column;
+}
+.container2{
+  height: 300px;
+}
+/*media ipad*/
+@media only screen and (max-width: 1024px){
+  .content-nav-comptabilite{
+    display: grid;
+    grid-template-areas:
+    "rev salFrais chif "
+    "rev salFrais chif";
+    grid-gap: 5px;
+    grid-template-columns: 220px 300px 220px;
+    /*height: 200px;*/
+
+  }
+}
