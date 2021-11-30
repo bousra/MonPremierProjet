@@ -25,4 +25,28 @@ export class ProductsService {
     const host= environment.host;
     return this.http.get<Product[]>(host+'/products?name_like='+keyword);
   }
+  selectOrUnSelectProduct(product: Product): Observable<Product>{
+    const host= environment.host;
+    product.selected=!product.selected;
+    return this.http.put<Product>(host+'/products/'+product.id,product);
+  }
+
+  deleteProduct(product: Product): Observable<void> {
+    const host= environment.host;
+    return this.http.delete<void>(host+'/products/'+product.id);
+  }
+
+  updateProduct(product: Product): Observable<Product> {
+    const host= environment.host;
+    return this.http.put<Product>(host+'/products/'+product.id, product);
+  }
+  save(product: Product): Observable<Product> {
+    const host= environment.host;
+    return this.http.post<Product>(host+'/products',product);
+  }
+  getProduct(id: number): Observable<Product>{
+    const host= environment.host;
+    return this.http.get<Product>(host+'/products/'+id);
+  }
+
 }

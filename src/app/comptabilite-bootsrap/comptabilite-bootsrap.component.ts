@@ -63,7 +63,7 @@ export class ComptabiliteBootsrapComponent implements OnInit {
       innerSize: '90%',
       type: 'pie',
       colorByPoint: true,
-      enableMouseTracking: false,
+      // enableMouseTracking: false,
       states: {
         hover: {
           enabled: false
@@ -131,12 +131,12 @@ export class ComptabiliteBootsrapComponent implements OnInit {
       name: 'resteRevenus',
       type: 'column',
       color: '#C4E1FF',
-      enableMouseTracking: false,
+     // enableMouseTracking: false,
       data: [2, 3, 4, 7, 2]
     }, {
       name: 'revenus',
       type: 'column',
-      enableMouseTracking: false,
+      // enableMouseTracking: false,
       color: '#38679b',
       data: [10, 2, 3, 2, 1]
     }]
@@ -167,7 +167,7 @@ export class ComptabiliteBootsrapComponent implements OnInit {
         dataLabels: {
           enabled: false
         },
-        enableMouseTracking: false
+       // enableMouseTracking: false
       }
     },
     series: [{
@@ -206,7 +206,7 @@ export class ComptabiliteBootsrapComponent implements OnInit {
         dataLabels: {
           enabled: false
         },
-        enableMouseTracking: false
+       // enableMouseTracking: false
       }
     },
     series: [{

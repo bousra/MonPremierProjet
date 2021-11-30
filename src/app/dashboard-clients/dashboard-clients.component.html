@@ -13,16 +13,17 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 <div class="row" style="background-color: lightgrey;margin: 5px;">
-  <div class="col-sm-12 col-md-12 col-lg-6">
-    <div class="d-flex flex-row" style="align-items: center;">
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="d-flex flex-row" style="align-items: center;margin: 5px 0;">
       <h4 style="text-align:left;color:#2295c7;font-weight: 900;text-transform: capitalize;margin-right: auto">r&eacute;sum&eacute;</h4>
       <select class="selected">
         <option selected>aujourd'hui</option>
       </select>
     </div>
     <!--    total/nouveaux clients-->
-    <div style="display: grid;grid-template-columns: 1fr 2fr;grid-gap: 10px;margin: 5px 0;">
-      <div class="border-radius" style="padding: 5px;background-color: #FFFFFF;">
+    <!--<div style="display: grid;grid-template-columns: 1fr 2fr;grid-gap: 10px;margin: 5px 0;"> margin: 5px 0 5px 5px;-->
+      <div class="row" style="margin: 5px 0;">
+      <div class="border-radius col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding: 5px;background-color: #FFFFFF;">
         <div class="d-flex flex-row">
           <img class="images" src="assets/images/clients/icone_clients.svg"
                style="align-self:center;width:40px;height: 40px;background-color: #38679b;">
@@ -35,8 +36,8 @@
 
       </div>
       <!--      nouveaux clients-->
-      <div class="border-radius"
-           style="display: grid;grid-template-columns: 2fr 1fr;padding: 5px;margin: 0 5px;background-color: #FFFFFF;">
+      <div class="border-radius col-xs-12 col-sm-7 col-md-7 col-lg-7"
+           style="display: grid;grid-template-columns: 2fr 1fr;padding: 5px;margin: 5px 0 5px 5px;float:right;background-color: #FFFFFF;">
         <div
           style="border-left:0;border-bottom:0;border-top:0;border-right: 1px;border-style: solid;padding:0 5px 0 0;border-color: #2295c7;">
           <div class="d-flex flex-row">
@@ -71,9 +72,9 @@
 
       </div>
     </div>
-    <!--    clients totaux- nouveaux clients graphes-->
+    <!-- graphes-->
     <div class="border-radius" style="padding: 5px;margin: 5px 0;background-color: #FFFFFF;">
-      <!--       clients totaux- nouveaux clients -->
+
       <div class="d-flex flex-row ">
         <ul class="border-radius"
             style="margin-right:10px ;width:200px;height:25px;padding-right:0.1em;border-width:1px;border-color:#2295c7;list-style-type: disc;color:#38679b;text-transform:capitalize;font-weight: 400;">
@@ -88,27 +89,22 @@
       </div>
       <!--      graphes-->
       <div [chart]="char"></div>
-      <div class="map-content">
-        <h4 style="text-align:left;color:#2295c7;font-weight: 900;text-transform: capitalize;margin-right: auto">
-          carte</h4>
-        <style>
-          .map-container {
-            width: 100%;
-            height: 50%;
-          }
-        </style>
-       <!-- <div *ngIf="apiLoaded | async">
-          <google-map [options]="options"></google-map>
-        </div>-->
-        <div id="map" class="map match-parent" style="height:200px;"></div>
 
-      </div>
+    </div>
+    <!--CARTE-->
+    <div class="map-content" style="margin: 5px 0;">
+      <h4 style="text-align:left;color:#2295c7;font-weight: 900;text-transform: capitalize;margin-right: auto">
+        carte</h4>
+      <!-- <div *ngIf="apiLoaded | async">
+         <google-map [options]="options"></google-map>
+       </div>-->
+      <div id="map" class="map match-parent" style="height:200px;border-radius: 5px;border-style: solid; border-color: #2295c7;"></div>
     </div>
   </div>
 
-  <div class="col-sm-12 col-md-12 col-lg-6">
-    <div class="secteur-activite-demandes row ">
-      <div class="secteur-activite col-sm-12 col-md-6 col-lg-6" >
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="secteur-activite-demandes row " >
+      <div class="secteur-activite col-xs-12 col-sm-12 col-md-6 col-lg-6" style="margin: 5px 0;">
 
         <div class="chart">
           <h4 style="text-align:left;color:#2295c7;font-weight: 900;text-transform: capitalize;margin-right: auto">
@@ -116,7 +112,7 @@
             d'activit&eacute;s</h4>
           <div class="border-radius" style="background-color: #FFFFFF;">
             <figure class="highcharts-figure" style="margin: 0;">
-              <div id="container" [chart]="charPie"></div>
+              <div id="container" [chart]="charPie" style="display: flex;justify-content: center;"></div>
             </figure>
             <div class="" style="text-align: left;padding: 0 5px;">
 
@@ -129,7 +125,7 @@
           </div>
         </div>
       </div>
-      <div class="demandes col-sm-12 col-md-6 col-lg-6">
+      <div class="demandes  col-xs-12 col-sm-12 col-md-6 col-lg-6" style="margin: 5px 0;">
         <div class="d-flex flex-column">
           <div class="d-flex flex-row">
             <h4 style="text-align:left;color:#2295c7;font-weight: 900;text-transform: capitalize;margin-right: auto">
@@ -146,14 +142,6 @@
               </ul>
             </div>
           </div>
-          <!--          <div class="dropdown" style="float:left;">-->
-          <!--            <button class="dropbtn"><a href="javascript:void(0)" class="btn" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a></button>-->
-          <!--            <div class="dropdown-content" style="left:0;">-->
-          <!--              <strong>Ordre d'affichage</strong>-->
-          <!--              <a href="#">Nombre de demande</a>-->
-          <!--              <a href="#">Date d'ajout</a>-->
-          <!--              <a href="#">Nom du client</a>-->
-          <!--            </div>-->
           <div class="content-demandes row"
                style="background-color: #FFFFFF;margin:-5px;padding:5px;border-radius: 5px;border-style:  solid; border-color: #ffffff;">
             <div class="d-flex flex-column col-sm-12 col-md-12" *ngFor="let demande of demandes"

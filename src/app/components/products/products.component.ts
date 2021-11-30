@@ -4,6 +4,7 @@ import {Product} from '../../model/product.model';
 import {Observable, of} from 'rxjs';
 import {catchError, map, startWith} from 'rxjs/operators';
 import {AppDataState, DataStateEnum} from '../../State/product.state';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -15,7 +16,7 @@ export class ProductsComponent implements OnInit {
   productsbeforePipe$: Observable<Product[]> | null = null;
   products$: Observable<AppDataState<Product[]>> | null = null;
   readonly DataStateEnum= DataStateEnum;
-  constructor(private productService: ProductsService) {
+  constructor(private productService: ProductsService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -81,4 +82,39 @@ export class ProductsComponent implements OnInit {
     );
   }
 
+  // tslint:disable-next-line:typedef
+  onSelect(p: Product) {
+  this.productService.selectOrUnSelectProduct(p)
+    .subscribe(data=>{
+      p.selected=data.selected;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  onDelete(p: Product) {
+    const valider = confirm('Etes vous sûr de vouloir supprimer');
+    if(valider) {
+    this.productService.deleteProduct(p)
+      .subscribe(data=>{
+        this.onGetAllProducts();
+      });
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  onUpdate(p: Product) {
+    this.productService.updateProduct(p)
+      .subscribe(data=>{
+        this.onGetAllProducts();
+      });
+  }
+
+  // tslint:disable-next-line:typedef
+  onNewProducts() {
+    this.router.navigateByUrl('/newProduct');
+  }
+  // tslint:disable-next-line:typedef
+  onEdit(p: Product){
+    this.router.navigateByUrl('/editProduct/'+p.id);
+  }
 }

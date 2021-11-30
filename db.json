@@ -5,23 +5,15 @@
       "name": "Computer",
       "price": 43,
       "quantity": 344,
-      "selected": false,
-      "available": true
-    },
-    {
-      "id": 2,
-      "name": "Printer",
-      "price": 43,
-      "quantity": 374,
       "selected": true,
-      "available": false
+      "available": true
     },
     {
       "id": 3,
       "name": "Smartphone",
       "price": 43,
       "quantity": 345,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -29,11 +21,32 @@
       "name": "Computer",
       "price": 43,
       "quantity": 344,
-      "selected": false,
+      "selected": true,
       "available": false
+    },
+    {
+      "name": "ioe",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 5
+    },
+    {
+      "name": "ioe",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 6
+    },
+    {
+      "name": "testestest",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 7
     }
   ]
-
-
-
 }

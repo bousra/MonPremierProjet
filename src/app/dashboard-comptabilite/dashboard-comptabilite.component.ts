@@ -66,7 +66,7 @@ export class DashboardComptabiliteComponent implements OnInit {
       innerSize: '90%',
       type: 'pie',
       colorByPoint: true,
-      enableMouseTracking: false,
+      // enableMouseTracking: false,
       states: {
         hover: {
           enabled: false
@@ -168,7 +168,7 @@ export class DashboardComptabiliteComponent implements OnInit {
         dataLabels: {
           enabled: false
         },
-        enableMouseTracking: false
+        // enableMouseTracking: false
       }
     },
     series: [{
@@ -206,7 +206,7 @@ export class DashboardComptabiliteComponent implements OnInit {
         dataLabels: {
           enabled: false
         },
-        enableMouseTracking: false
+        // enableMouseTracking: false
       }
     },
     series: [{

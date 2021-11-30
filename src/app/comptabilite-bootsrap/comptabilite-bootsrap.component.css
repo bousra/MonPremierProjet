@@ -177,52 +177,18 @@ input[type="number"] {
 }
 .flex-row{flex-direction:row!important}.flex-column{flex-direction:column!important}.flex-row-reverse{flex-direction:row-reverse!important}.flex-column-reverse{flex-direction:column-reverse!important}
 .flex-wrap{flex-wrap:wrap!important}.flex-nowrap{flex-wrap:nowrap!important}.flex-wrap-reverse{flex-wrap:wrap-reverse!important}
-.depenses{
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  border-color: #fff;
-  border-style: solid;
-  margin: 5px 5px 0;
-
-}
 .padding-top-bottom{
   padding: 5px 0 ;
 }
 .padding-top-bottom-left{
   padding: 5px 0 5px 5px;
 }
-.salaires{
+.depSalFrais{
   background-color: #FFFFFF;
   border-radius: 10px;
   border-color: #fff;
   border-style: solid;
-  margin: 5px 5px 0;
+  margin: 5px;
 }
-.frais{
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  border-color: #fff;
-  border-style: solid;
-  margin: 5px 5px 0;
-}
-/*
-@media (min-width: 768px) {
-  .col-sm-3 {
-    width: 31%;
-  }
-}
-@media (min-width: 992px){
-
-  .col-md-3 {
-    width: 31%;
-  }
-}
-@media (min-width: 1200px){
-
-  .col-lg-3 {
-    width: 31%;
-  }
-}
-*/
 
 

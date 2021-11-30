@@ -31,11 +31,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "lib/js/jquery-1.11.0.min.js",
+              "lib/js/jquery-ui.min.js",
+              "lib/app-ui/js/vendor/bootstrap.min.js",
+              "lib/app-ui/js/plugins.js"
             ]
           },
           "configurations": {

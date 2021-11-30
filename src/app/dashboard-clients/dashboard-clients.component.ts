@@ -34,7 +34,7 @@ export class DashboardClientsComponent implements OnInit {
         dataLabels: {
           enabled: false
         },
-        enableMouseTracking: false
+        // enableMouseTracking: false
       }
     },
     series: [{
@@ -102,7 +102,7 @@ export class DashboardClientsComponent implements OnInit {
             value: 4
           }
         },
-        enableMouseTracking: false
+        // enableMouseTracking: false
       }
     },
     series: [{

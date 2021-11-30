@@ -1,17 +1,21 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-inverse">
 
-      <ul class=" navbar navbar-nav me-auto">
-        <li class="nav-item">
-          <button class="btn btn-outline-info me-2 " (click)="onGetAllProducts()">All</button>
+      <ul class=" nav navbar-nav navbar-form ">
+        <li >
+          <button class="btn" (click)="onGetAllProducts()" style="margin-left: 5px">All</button>
         </li>
-        <li class="nav-item">
-          <button class="btn btn-outline-info me-2" (click)="onGetSelectedProducts()" >Selected</button>
+        <li >
+          <button class="btn" (click)="onGetSelectedProducts()" style="margin-left: 5px">Selected</button>
         </li>
-        <li class="nav-item">
-          <button class="btn btn-outline-info me-2" (click)="onGetAvailableProducts()" >Available</button>
+        <li>
+          <button class="btn" (click)="onGetAvailableProducts()" style="margin-left: 5px">Available</button>
         </li>
+        <li>
+          <button class="btn" (click)="onNewProducts()" style="margin-left: 5px">New Product</button>
+        </li>
+
       </ul>
-      <form class="d-flex" #f="ngForm"   (ngSubmit)="onSearch(f.value)" >
+      <form class="navbar-form navbar-right" #f="ngForm"   (ngSubmit)="onSearch(f.value)" >
         <input class="form-control me-2" ngModel name="keyword" type="text" placeholder="Rechercher">
         <button class="btn btn-primary" type="submit"><span class="fa fa-search"></span> </button>
       </form>
@@ -37,24 +41,34 @@
   <ng-container *ngIf="(products$ | async) as result" [ngSwitch]="result.dataState">
 
     <ng-container *ngSwitchCase="DataStateEnum.LOADING">
-      LOADING.........
+      LOADING.......
     </ng-container>
     <ng-container *ngSwitchCase="DataStateEnum.ERROR">
      <div class="alert-danger">
         {{result.errorMessage}}</div>
     </ng-container>
     <ng-container *ngSwitchCase="DataStateEnum.LOADED">
-      <table class="table">
+      <table class="table text-center">
         <tr>
-          <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th><th>Selected</th><th>Available</th>
+          <th style="text-align: center">ID</th><th style="text-align: center">Name</th><th style="text-align: center">Price</th><th style="text-align: center">Quantity</th><th style="text-align: center">Selected</th><th style="text-align: center">Available</th>
         </tr>
         <tr *ngFor="let p of result.data">
           <td>{{p.id}}</td>
-          <td>{{p.name|uppercase}}</td>
+          <td>{{p.name | uppercase}}</td>
           <td>{{p.price}}</td>
           <td>{{p.quantity}}</td>
-          <td>{{p.selected}}</td>
+          <td ><span style="padding: 0.4em; color: #FFFFFF;border-radius: 0.4em; border-style: solid;" [ngStyle]="{'background-color':p.selected=== true ?'#7dc402':' #de815c' }">{{p.selected}}</span></td>
           <td>{{p.available}}</td>
+          <td><button [ngClass]="p.selected?'btn-success':'btn-danger'" class="btn" (click)="onSelect(p)">
+            <span *ngIf="p.selected" >Unselect</span>
+            <span *ngIf="!p.selected" >Select</span>
+          </button></td>
+          <td><button  class="btn btn-danger" (click)="onDelete(p)">
+            <span class="fa fa-trash-o"></span>
+          </button></td>
+          <td><button  class="btn" (click)="onEdit(p)">
+            <span class="fa fa-edit"></span>
+          </button></td>
         </tr>
       </table>
     </ng-container>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var DataStateEnum = /*#__PURE__*/(() => {\n  (function (DataStateEnum) {\n    DataStateEnum[\"LOADING\"] = \"LOADING\";\n    DataStateEnum[\"LOADED\"] = \"LOADED\";\n    DataStateEnum[\"ERROR\"] = \"ERROR\";\n  })(DataStateEnum || (DataStateEnum = {}));\n\n  return DataStateEnum;\n})();","map":null,"metadata":{},"sourceType":"module"}
