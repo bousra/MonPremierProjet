@@ -31,7 +31,9 @@ import { FullCalendarModule } from '@fullcalendar/angular'; // must go before pl
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
 import { ProductAddComponent } from './components/product-add/product-add.component';
-import { ProductEditComponent } from './components/product-edit/product-edit.component'; // a plugin!
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { ProductNavBarComponent } from './components/products/product-nav-bar/product-nav-bar.component';
+import { ProductListComponent } from './components/products/product-list/product-list.component'; // a plugin!
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -59,6 +61,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     ClientBysectorComponent,
     ProductAddComponent,
     ProductEditComponent,
+    ProductNavBarComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {ProductsService} from '../../services/products.service';
 import {Product} from '../../model/product.model';
 import {Observable, of} from 'rxjs';
 import {catchError, map, startWith} from 'rxjs/operators';
-import {AppDataState, DataStateEnum} from '../../State/product.state';
+import {ActionEvent, AppDataState, DataStateEnum, ProductActionsTypes} from '../../State/product.state';
 import {Router} from '@angular/router';
 
 @Component({
@@ -14,7 +14,9 @@ import {Router} from '@angular/router';
 export class ProductsComponent implements OnInit {
   productsAncien: Product[] | null = null;
   productsbeforePipe$: Observable<Product[]> | null = null;
-  products$: Observable<AppDataState<Product[]>> | null = null;
+  @Output() products$: Observable<AppDataState<Product[]>> | null = null;
+
+
   readonly DataStateEnum= DataStateEnum;
   constructor(private productService: ProductsService, private router: Router) {
   }
@@ -116,5 +118,17 @@ export class ProductsComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onEdit(p: Product){
     this.router.navigateByUrl('/editProduct/'+p.id);
+  }
+
+  // tslint:disable-next-line:typedef
+  onActionEvent($event: ActionEvent) {
+    console.log($event.type);
+    switch ($event.type){
+      case(ProductActionsTypes.GET_ALL_PRODUCTS): this.onGetAllProducts();break;
+      case(ProductActionsTypes.GET_AVAILABLE_PRODUCTS): this.onGetAvailableProducts();break;
+      case(ProductActionsTypes.GET_SELECTED_PRODUCTS): this.onGetSelectedProducts();break;
+      case(ProductActionsTypes.SEARCH_PRODUCTS): this.onSearch($event.payload);break;
+      case(ProductActionsTypes.NEW_PRODUCTS): this.onNewProducts();break;
+    }
   }
 }

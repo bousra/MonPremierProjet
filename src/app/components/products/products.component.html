@@ -1,42 +1,4 @@
-<nav class="navbar navbar-inverse">
-
-      <ul class=" nav navbar-nav navbar-form ">
-        <li >
-          <button class="btn" (click)="onGetAllProducts()" style="margin-left: 5px">All</button>
-        </li>
-        <li >
-          <button class="btn" (click)="onGetSelectedProducts()" style="margin-left: 5px">Selected</button>
-        </li>
-        <li>
-          <button class="btn" (click)="onGetAvailableProducts()" style="margin-left: 5px">Available</button>
-        </li>
-        <li>
-          <button class="btn" (click)="onNewProducts()" style="margin-left: 5px">New Product</button>
-        </li>
-
-      </ul>
-      <form class="navbar-form navbar-right" #f="ngForm"   (ngSubmit)="onSearch(f.value)" >
-        <input class="form-control me-2" ngModel name="keyword" type="text" placeholder="Rechercher">
-        <button class="btn btn-primary" type="submit"><span class="fa fa-search"></span> </button>
-      </form>
-</nav>
-
-<!--<div class="container" *ngIf="products$">
-
-  <table class="table">
-    <tr>
-      <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th><th>Selected</th><th>Available</th>
-    </tr>
-    <tr *ngFor="let p of products$ | async">&lt;!&ndash; sans le async et $ pour la partie Ancien&ndash;&gt;
-      <td>{{p.id}}</td>
-      <td>{{p.name}}</td>
-      <td>{{p.price}}</td>
-      <td>{{p.quantity}}</td>
-      <td>{{p.selected}}</td>
-      <td>{{p.available}}</td>
-    </tr>
-  </table>
-</div>-->
+<app-product-nav-bar (productEvenEmitter)="onActionEvent($event)"></app-product-nav-bar>
 <div class="container">
   <ng-container *ngIf="(products$ | async) as result" [ngSwitch]="result.dataState">
 
@@ -58,7 +20,7 @@
           <td>{{p.price}}</td>
           <td>{{p.quantity}}</td>
           <td ><span style="padding: 0.4em; color: #FFFFFF;border-radius: 0.4em; border-style: solid;" [ngStyle]="{'background-color':p.selected=== true ?'#7dc402':' #de815c' }">{{p.selected}}</span></td>
-          <td>{{p.available}}</td>
+          <td> <span style="padding: 0.4em; color: #FFFFFF;border-radius: 0.4em; border-style: solid;" [ngStyle]="{'background-color':p.available=== true ?'#7dc402':' #de815c' }"></span>{{p.available}}</td>
           <td><button [ngClass]="p.selected?'btn-success':'btn-danger'" class="btn" (click)="onSelect(p)">
             <span *ngIf="p.selected" >Unselect</span>
             <span *ngIf="!p.selected" >Select</span>
@@ -74,3 +36,4 @@
     </ng-container>
   </ng-container>
 </div>
+
