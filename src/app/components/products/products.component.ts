@@ -131,4 +131,15 @@ export class ProductsComponent implements OnInit {
       case(ProductActionsTypes.NEW_PRODUCTS): this.onNewProducts();break;
     }
   }
+
+  // tslint:disable-next-line:typedef
+  onActionListEvent($event: ActionEvent) {
+    switch ($event.type){
+      case(ProductActionsTypes.EDIT_PRODUCT): this.onEdit($event.payload);break;
+      case(ProductActionsTypes.DELETE_PRODUCT): this.onDelete($event.payload);break;
+      case(ProductActionsTypes.SELECT_PRODUCT): this.onSelect($event.payload);break;
+
+    }
+
+  }
 }

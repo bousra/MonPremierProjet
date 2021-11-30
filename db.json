@@ -2,11 +2,11 @@
   "products": [
     {
       "id": 1,
-      "name": "Computer",
+      "name": "Computertest",
       "price": 43,
       "quantity": 344,
       "selected": true,
-      "available": true
+      "available": false
     },
     {
       "id": 3,
@@ -39,14 +39,6 @@
       "selected": true,
       "available": true,
       "id": 6
-    },
-    {
-      "name": "testestest",
-      "price": 0,
-      "quantity": 0,
-      "selected": true,
-      "available": true,
-      "id": 7
     }
   ]
 }
