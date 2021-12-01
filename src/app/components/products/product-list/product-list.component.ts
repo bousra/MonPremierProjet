@@ -40,4 +40,9 @@ export class ProductListComponent implements OnInit {
       payload: product
     });
   }
+
+  // tslint:disable-next-line:typedef
+  onActionEvent($event: ActionEvent) {
+    this.productEventEmitter.emit($event);
+  }
 }

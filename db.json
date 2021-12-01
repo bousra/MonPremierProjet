@@ -1,34 +1,26 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Computertest",
-      "price": 43,
-      "quantity": 344,
-      "selected": true,
-      "available": false
-    },
-    {
       "id": 3,
-      "name": "Smartphone",
+      "name": "SmartphoneMoussa",
       "price": 43,
       "quantity": 345,
-      "selected": false,
-      "available": true
+      "selected": true,
+      "available": false
     },
     {
       "id": 4,
       "name": "Computer",
       "price": 43,
       "quantity": 344,
-      "selected": true,
+      "selected": false,
       "available": false
     },
     {
       "name": "ioe",
       "price": 0,
       "quantity": 0,
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 5
     },
@@ -36,7 +28,7 @@
       "name": "ioe",
       "price": 0,
       "quantity": 0,
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 6
     }

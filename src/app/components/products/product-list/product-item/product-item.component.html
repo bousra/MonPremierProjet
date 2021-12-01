@@ -1,0 +1,18 @@
+<tr *ngIf="product">
+  <td>{{product.id}}</td>
+  <td>{{product.name | uppercase}}</td>
+  <td>{{product.price}}</td>
+  <td>{{product.quantity}}</td>
+  <td ><span style="padding: 0.4em; color: #FFFFFF;border-radius: 0.4em; border-style: solid;" [ngStyle]="{'background-color':product.selected=== true ?'#7dc402':' #de815c' }">{{product.selected}}</span></td>
+  <td> <span style="padding: 0.4em; color: #FFFFFF;border-radius: 0.4em; border-style: solid;" [ngStyle]="{'background-color':product.available=== true ?'#7dc402':' #de815c' }">{{product.available}}</span></td>
+  <td><button [ngClass]="product.selected?'btn-success':'btn-danger'" class="btn" (click)="onSelect(product)">
+    <span *ngIf="product.selected" >Unselect</span>
+    <span *ngIf="!product.selected" >Select</span>
+  </button></td>
+  <td><button  class="btn btn-danger" (click)="onDelete(product)">
+    <span class="fa fa-trash-o"></span>
+  </button></td>
+  <td><button  class="btn" (click)="onEdit(product)">
+    <span class="fa fa-edit"></span>
+  </button></td>
+</tr>
